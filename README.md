@@ -136,11 +136,11 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 ## CHANGES
 ### 03-02-2021
--[x] Start markdown  
+- [x] Start markdown  
 
 ## BACKLOG
--[ ] Fetch Data from spaceX API  
--[ ] Render Data in HTML
+- [ ] Fetch Data from spaceX API  
+- [ ] Render Data in HTML
 # SOURCES
 * [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 * [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
