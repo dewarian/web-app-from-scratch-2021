@@ -136,11 +136,17 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 ## CHANGES
 ### 03-02-2021
-- [x] Start markdown  
+- [x] Add new tasks in backlog.  
+- [x] Fix checkbox in changelog. 
+- [x] Add external data section incl. response.  
+- [x] Start markdown.
 
 ## BACKLOG
-- [ ] Fetch Data from spaceX API  
-- [ ] Render Data in HTML
+- [ ] Fetch Data from spaceX API. 
+  - [ ] Store response in localStorage 
+- [ ] Render Data in HTML.
+  - [ ] Rendering should be done in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html).  
+- [ ] Conduct a code review.
 # SOURCES
 * [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 * [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
