@@ -18,7 +18,7 @@ const getData = async (url) => {
  * @description immediately self invoking function javascript, executes when block is called.
  * 
  */
-(function(){
+(async function(){
   console.log('hello');
-  getData(`${baseUrl}/ships`)
+  await getData(`${baseUrl}/ships`)
 })();

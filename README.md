@@ -12,7 +12,7 @@
 * [Sources](#sources)
 
 # DEMO 🌍
-Visit the live version of this prototype on [SpaceX WAFS](https://dewarian.github.io/web-app-from-scratch-2021).
+Visit the live version of this prototype on [SpaceX WAFS](https://nb-wafs.vercel.app/).
 
 # DESCRIPTION
 Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries. 
