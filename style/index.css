@@ -7,43 +7,45 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+#logo > svg {
+  width: 10vw;
 }
 
 nav {
-  background-color: #ffcc00;
-  margin: 2vh 6vw;
-}
-nav svg{
-  width: 210px;
-}
-
-.fill-white{
-  background-color: white;
+  background: linear-gradient(to top, #ffffff25, #00000025);
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-bottom: 1em;
+  border: 1px solid black;
 }
 
-main {
-  flex: 1 0 auto;
+
+/*  ************
+    ** Footer **
+    ************
+    @Sources https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+*/
+footer p > a{
+  text-decoration: none;
+  color: #000;
+  position: relative;
 }
 
-footer{
-  display: inline-flex;
-  flex-shrink: 0;
-  justify-content: center;
+footer p > a:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
   
-  padding: 20px;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+footer p > a:hover:before{
+  visibility: visible;
+  transform: scaleX(1);
   background-color: #ffcc00;
-  font-style: italic;
 }
-
-h2 {
-  font-size: 1.75em;
-  padding-left: 20px;
-}
-
