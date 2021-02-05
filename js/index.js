@@ -16,10 +16,11 @@ const getData = async (url) => {
     .then(data => {
       render(data);
       console.log(data);
+      console.log(data.map(x => {console.log(x.launches)}));
     })
 }
 
-function render(data) {
+const render = (data) => {
   Object.values(data).map(
     key => {
       const html = `
