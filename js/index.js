@@ -21,8 +21,8 @@ const getData = async (url) => {
 
 /**
  * @description Function loops through array elements and injects into DOM.
- * @todo [] Make it modular, no hardcoded Key names
- *       [] Expand upon the render functionality by extracting html element from this block.
+ * @todo Make it modular, no hardcoded Key names
+ * @todo Expand upon the render functionality by extracting html element from this block.
  * @param {Array} data Array of objects to loop through.  
  */
 const render = (data) => {
