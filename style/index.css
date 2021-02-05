@@ -11,6 +11,11 @@
   width: 10vw;
 }
 
+.fill-white{
+  color: white;
+  background-color: white;
+}
+
 nav {
   background: linear-gradient(to top, #ffffff25, #00000025);
   padding: 0.5em;
@@ -48,4 +53,8 @@ footer p > a:hover:before{
   visibility: visible;
   transform: scaleX(1);
   background-color: #ffcc00;
+}
+
+figure > img {
+  max-width: 300px;
 }

@@ -6,17 +6,29 @@ const mainContainer = document.querySelector('main');
 document.querySelector('footer span').insertAdjacentHTML('afterbegin', new Date().getFullYear());
 
 
+/**
+ * 
+ * @param {*} url 
+ */
 const getData = async (url) => {
   return await fetch(url)
-  .then(response => response.json())
-  // .then(data => console.log(data))
-  .then(data => { render(data);})
+    .then(response => response.json())
+    .then(data => {
+      render(data);
+      console.log(data);
+    })
 }
 
 function render(data) {
-   Object.values(data).map(
+  Object.values(data).map(
     key => {
-      return mainContainer.insertAdjacentHTML('beforeend', `<h1>${key.name}</h1>`)
+      const html = `
+        <figure>
+          <img src="${key.image}" alt="${key.name}">
+          <figcaption><a href="#">${key.name}</a>, ${key.agency}</figcaption>
+        </figure>
+      `
+      return mainContainer.insertAdjacentHTML('beforeend', html)
     }
   )
 }
@@ -24,8 +36,7 @@ function render(data) {
 /**
  * @description immediately self invoking function javascript, executes when block is called.
  */
-(async function(){
-  // await console.log(getData(`${baseUrl}/${endpoint}`).then(data => console.log(data)))
+(async function () {
   // await render(getData(`${baseUrl}/${endpoint}`))
   getData(`${baseUrl}/${endpoint}`)
 })();
