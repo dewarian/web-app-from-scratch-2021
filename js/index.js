@@ -5,9 +5,9 @@ const mainContainer = document.querySelector('main');
 // Insert current year in footer
 document.querySelector('footer span').insertAdjacentHTML('afterbegin', new Date().getFullYear());
 
-
 /**
- * 
+ * @description Retrieves data and runs data dependent functionality
+ * @todo Split function up.
  * @param {*} url 
  */
 const getData = async (url) => {
@@ -16,10 +16,15 @@ const getData = async (url) => {
     .then(data => {
       render(data);
       console.log(data);
-      console.log(data.map(x => {console.log(x.launches)}));
     })
 }
 
+/**
+ * @description Function loops through array elements and injects into DOM.
+ * @todo [] Make it modular, no hardcoded Key names
+ *       [] Expand upon the render functionality by extracting html element from this block.
+ * @param {Array} data Array of objects to loop through.  
+ */
 const render = (data) => {
   Object.values(data).map(
     key => {
