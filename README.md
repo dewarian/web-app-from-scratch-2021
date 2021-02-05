@@ -134,6 +134,8 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 # CHANGELOG
 
+This part of the README is ever changing. 
+
 ## CHANGES
 ### 03-02-2021
 - [x] Add new tasks in backlog.  
