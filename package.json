@@ -1,0 +1,32 @@
+{
+  "name": "nb-wafs-2021",
+  "version": "1.0.0",
+  "description": "Web App From Scratch @cmda-minor-web 2020 - 2021",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dewarian/web-app-from-scratch-2021.git"
+  },
+  "keywords": [
+    "hva",
+    "cmd",
+    "minor",
+    "wafs",
+    "web-app-from-scratch"
+  ],
+  "author": "Nathan Bommezijn",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/dewarian/web-app-from-scratch-2021/issues"
+  },
+  "homepage": "https://github.com/dewarian/web-app-from-scratch-2021#readme"
+}
