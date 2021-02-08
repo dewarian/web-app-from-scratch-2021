@@ -8,7 +8,8 @@ document.querySelector('footer span').insertAdjacentHTML('afterbegin', new Date(
 /**
  * @description Retrieves data and runs data dependent functionality
  * @todo Split function up.
- * @param {*} url 
+ * @todo Remove render(data)
+ * @param {String} url API endpoint to call.
  */
 const getData = async (url) => {
   return await fetch(url)
