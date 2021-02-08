@@ -7,17 +7,11 @@ document.querySelector('footer span').insertAdjacentHTML('afterbegin', new Date(
 
 /**
  * @description Retrieves data and runs data dependent functionality
- * @todo Split function up.
- * @todo Remove render(data)
  * @param {String} url API endpoint to call.
  */
 const getData = async (url) => {
   return await fetch(url)
     .then(response => response.json())
-    .then(data => {
-      render(data);
-      console.log(data);
-    })
 }
 
 /**
@@ -44,6 +38,6 @@ const render = (data) => {
  * @description immediately self invoking function javascript, executes when block is called.
  */
 (async function () {
-  // await render(getData(`${baseUrl}/${endpoint}`))
-  getData(`${baseUrl}/${endpoint}`)
+  let data = await getData(`${baseUrl}/${endpoint}`);
+  render(data)
 })();
