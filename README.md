@@ -132,6 +132,14 @@ GET https://api.spacexdata.com/v4/launches/latest
 ```
 </details>
 
+# BREAKDOWN APPLICATION
+## Actor Diagram
+![](./assets/diagram_actor.png)
+
+## Interaction Diagram
+![](./assets/diagram_interaction.png)
+
+
 # CHANGELOG
 
 This part of the README is ever changing. 
@@ -139,8 +147,20 @@ This part of the README is ever changing.
 ## CHANGES
 
 ### 08-02-2021
-- [x] Actor Diagram
-- [x] Interaction Diagram
+- [ ] Start with JSDocs
+  - [x] NPM initialize.
+  - [x] JSDoc theme
+- [x] Cleansed repo
+  - [x] Moved course content to [/course](https://github.com/dewarian/web-app-from-scratch-2021/tree/master/course).
+  - [x] Created assets folder.
+  - [x] Update [.gitignore](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/.gitignore).
+- [x] Created actor Diagram
+- [x] Created interaction Diagram
+
+### 05-02-2021
+- [x] Render Data in HTML.
+  - [x] Rendering should be done in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html).  
+- [x] Conduct a code review.
 ### 03-02-2021
 - [x] Add new tasks in backlog.  
 - [x] Fix checkbox in changelog. 
@@ -148,11 +168,8 @@ This part of the README is ever changing.
 - [x] Start markdown.
 
 ## BACKLOG
-- [ ] Fetch Data from spaceX API. 
+- [x] Fetch Data from spaceX API. 
   - [ ] Store response in localStorage 
-- [ ] Render Data in HTML.
-  - [ ] Rendering should be done in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html).  
-- [ ] Conduct a code review.
 # SOURCES
 * [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 * [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
