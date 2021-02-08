@@ -137,6 +137,10 @@ GET https://api.spacexdata.com/v4/launches/latest
 This part of the README is ever changing. 
 
 ## CHANGES
+
+### 08-02-2021
+- [x] Actor Diagram
+- [x] Interaction Diagram
 ### 03-02-2021
 - [x] Add new tasks in backlog.  
 - [x] Fix checkbox in changelog. 
