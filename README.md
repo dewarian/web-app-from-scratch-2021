@@ -8,6 +8,7 @@
 * [Installation](#installation)
 * [Usage & Features](#demo)
 * [External Data](#external-data)
+* [Diagrams](#breakdown-application)
 * [Changelog](#changelog)
 * [Sources](#sources)
 
@@ -169,7 +170,10 @@ This part of the README is ever changing.
 
 ## BACKLOG
 - [x] Fetch Data from spaceX API. 
-  - [ ] Store response in localStorage 
+  - [ ] Store response in localStorage
+- [ ] Create routing
+  - [ ] Develop it in such manner it creates clean slugs.
+- [ ] Extend diagrams as development goes on.
 # SOURCES
 * [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 * [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
