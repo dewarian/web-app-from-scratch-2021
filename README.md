@@ -135,19 +135,20 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 # BREAKDOWN APPLICATION
 ## Actor Diagram
-![](./assets/diagram_actor.png)
+![](./static/assets/diagram_actor.png)
 
 ## Interaction Diagram
-![](./assets/diagram_interaction.png)
+![](./static/assets/diagram_interaction.png)
 
 
 # CHANGELOG
 
-This part of the README is ever changing. 
+This part of the README is everchanging. 
 
 ## CHANGES
 
 ### 08-02-2021
+- [x] Solved [issues in Github.](https://github.com/dewarian/web-app-from-scratch-2021/issues)
 - [ ] Start with JSDocs
   - [x] NPM initialize.
   - [x] JSDoc theme
