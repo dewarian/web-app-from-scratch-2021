@@ -135,7 +135,7 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 # BREAKDOWN APPLICATION
 ## Actor Diagram
-![https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png)
+![Actor Diagram of how this application is structured.](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png)
 
 ## Interaction Diagram
 ![Interaction Diagram how this application will react with eachother](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png)
