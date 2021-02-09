@@ -1,4 +1,5 @@
 /**
+ * @title Render HTML element
  * @description Function loops through array elements and injects into DOM.
  * @todo Make it modular, no hardcoded Key names
  * @todo Expand upon the render functionality by extracting html element from this block.

@@ -1,3 +1,8 @@
+/**
+ * @title Check module.data
+ * @description Test function
+ * @param {String} test A string to check if the modular approach works properly
+ */
 export const datatest = (test) => {
   return console.log(`%c${test}`, 'color: #ffcc00; font-weight: bold;')
 }
