@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getData">getData</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#render">render</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><p><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></p>
+<p><img src="https://www.spaceflightinsider.com/wp-content/uploads/2015/09/SpaceX-logo-posted-on-SpaceFlight-Insider.png" alt=""></p>
+<h2>Table of content</h2>
+<ul>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#description">Description</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#demo">Usage &amp; Features</a></li>
+<li><a href="#external-data">External Data</a></li>
+<li><a href="#breakdown-application">Diagrams</a></li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#sources">Sources</a></li>
+</ul>
+<h1>DEMO 🌍</h1>
+<p>Visit the live version of this prototype on <a href="https://nb-wafs.vercel.app/">SpaceX WAFS</a>.</p>
+<h1>DESCRIPTION</h1>
+<p>Web-App-From-Scratch is a course from the <a href="https://github.com/cmda-minor-web/web-app-from-scratch-2021">minor Web Development And Design</a> where we build a web app with external data but without any frameworks or unnecessary libraries.</p>
+<p>The current concept for this web app</p>
+<h1>INSTALLATION</h1>
+<h2>Prerequisites</h2>
+<p>Before you continue with installing this project on your machine make sure your machine has the following;</p>
+<ul>
+<li><a href="https://git-scm.com/">GIT</a></li>
+</ul>
+<h2>Installation</h2>
+<p>Navigate to a folder where you want to install this application and run the following bash / ZSH command</p>
+<pre class="prettyprint source lang-zsh"><code>git clone https://github.com/dewarian/web-app-from-scratch-2021.git
+</code></pre>
+<h1>USAGE &amp;&amp; FEATURES</h1>
+<p>Run the project with the extension <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live-server</a> or a similar extension if you don't use <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<h1>EXTERNAL DATA</h1>
+<p>Data is being inserted from an external API called <a href="https://github.com/r-spacex/SpaceX-API">spaceX-API</a> and is created by multiple contributors.</p>
+<p>The API is an Open Source REST API for multiple categories of data surrounding SpaceX</p>
+<p>To get started with using the API you can send a <code>GET</code> request to the following endpoint</p>
+<pre class="prettyprint source lang-http"><code>GET https://api.spacexdata.com/v4/launches/latest
+</code></pre>
+<details>
+<summary>Response GET request</summary>
+```JSON
+{
+  "fairings": null,
+  "links": {
+    "patch": {
+      "small": "https://images2.imgbox.com/eb/0f/Vev7xkUX_o.png",
+      "large": "https://images2.imgbox.com/ab/79/Wyc9K7fv_o.png"
+    },
+    "reddit": {
+      "campaign": "https://www.reddit.com/r/spacex/comments/fjf6rr/dm2_launch_campaign_thread/",
+      "launch": "https://www.reddit.com/r/spacex/comments/glwz6n/rspacex_cctcap_demonstration_mission_2_general",
+      "media": "https://www.reddit.com/r/spacex/comments/gp1gf5/rspacex_dm2_media_thread_photographer_contest/",
+      "recovery": "https://www.reddit.com/r/spacex/comments/gu5gkd/cctcap_demonstration_mission_2_stage_1_recovery/"
+    },
+    "flickr": {
+      "small": [],
+      "original": [
+        "https://live.staticflickr.com/65535/49927519643_b43c6d4c44_o.jpg",
+        "https://live.staticflickr.com/65535/49927519588_8a39a3994f_o.jpg",
+        "https://live.staticflickr.com/65535/49928343022_6fb33cbd9c_o.jpg",
+        "https://live.staticflickr.com/65535/49934168858_cacb00d790_o.jpg",
+        "https://live.staticflickr.com/65535/49934682271_fd6a31becc_o.jpg",
+        "https://live.staticflickr.com/65535/49956109906_f88d815772_o.jpg",
+        "https://live.staticflickr.com/65535/49956109706_cffa847208_o.jpg",
+        "https://live.staticflickr.com/65535/49956109671_859b323ede_o.jpg",
+        "https://live.staticflickr.com/65535/49955609618_4cca01d581_o.jpg",
+        "https://live.staticflickr.com/65535/49956396622_975c116b71_o.jpg",
+        "https://live.staticflickr.com/65535/49955609378_9b77e5c771_o.jpg",
+        "https://live.staticflickr.com/65535/49956396262_ef41c1d9b0_o.jpg"
+      ]
+    },
+    "presskit": "https://www.nasa.gov/sites/default/files/atoms/files/commercialcrew_press_kit.pdf",
+    "webcast": "https://youtu.be/xY96v0OIcK4",
+    "youtube_id": "xY96v0OIcK4",
+    "article": "https://spaceflightnow.com/2020/05/30/nasa-astronauts-launch-from-us-soil-for-first-time-in-nine-years/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Crew_Dragon_Demo-2"
+  },
+  "static_fire_date_utc": "2020-05-22T17:39:00.000Z",
+  "static_fire_date_unix": 1590169140,
+  "tdb": false,
+  "net": false,
+  "window": 0,
+  "rocket": "5e9d0d95eda69973a809d1ec",
+  "success": true,
+  "failures": [],
+  "details": "SpaceX will launch the second demonstration mission of its Crew Dragon vehicle as part of NASA's Commercial Crew Transportation Capability Program (CCtCap), carrying two NASA astronauts to the International Space Station. Barring unexpected developments, this mission will be the first crewed flight to launch from the United States since the end of the Space Shuttle program in 2011. DM-2 demonstrates the Falcon 9 and Crew Dragon's ability to safely transport crew to the space station and back to Earth and it is the last major milestone for certification of Crew Dragon. Initially the mission duration was planned to be no longer than two weeks, however NASA has been considering an extension to as much as six weeks or three months. The astronauts have been undergoing additional training for the possible longer mission.",
+  "crew": [
+    "5ebf1b7323a9a60006e03a7b",
+    "5ebf1a6e23a9a60006e03a7a"
+  ],
+  "ships": [
+    "5ea6ed30080df4000697c913",
+    "5ea6ed2f080df4000697c90b",
+    "5ea6ed2f080df4000697c90c",
+    "5ea6ed2e080df4000697c909",
+    "5ea6ed2f080df4000697c90d"
+  ],
+  "capsules": [
+    "5e9e2c5df359188aba3b2676"
+  ],
+  "payloads": [
+    "5eb0e4d1b6c3bb0006eeb257"
+  ],
+  "launchpad": "5e9e4502f509094188566f88",
+  "auto_update": true,
+  "flight_number": 94,
+  "name": "CCtCap Demo Mission 2",
+  "date_utc": "2020-05-30T19:22:00.000Z",
+  "date_unix": 1590866520,
+  "date_local": "2020-05-30T15:22:00-04:00",
+  "date_precision": "hour",
+  "upcoming": false,
+  "cores": [
+    {
+      "core": "5e9e28a7f3591817f23b2663",
+      "flight": 1,
+      "gridfins": true,
+      "legs": true,
+      "reused": false,
+      "landing_attempt": true,
+      "landing_success": true,
+      "landing_type": "ASDS",
+      "landpad": "5e9e3032383ecb6bb234e7ca"
+    }
+  ],
+  "id": "5eb87d46ffd86e000604b388"
+}
+```
+</details>
+<h1>BREAKDOWN APPLICATION</h1>
+<h2>Actor Diagram</h2>
+<p>![https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png)</p>
+<h2>Interaction Diagram</h2>
+<p><img src="https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png" alt="Interaction Diagram how this application will react with eachother"></p>
+<h1>CHANGELOG</h1>
+<p>This part of the README is everchanging.</p>
+<h2>CHANGES</h2>
+<h3>08-02-2021</h3>
+<ul>
+<li>[x] Solved <a href="https://github.com/dewarian/web-app-from-scratch-2021/issues">issues in Github.</a></li>
+<li>[ ] Start with JSDocs
+<ul>
+<li>[x] NPM initialize.</li>
+<li>[x] JSDoc theme</li>
+</ul>
+</li>
+<li>[x] Cleansed repo
+<ul>
+<li>[x] Moved course content to <a href="https://github.com/dewarian/web-app-from-scratch-2021/tree/master/course">/course</a>.</li>
+<li>[x] Created assets folder.</li>
+<li>[x] Update <a href="https://github.com/dewarian/web-app-from-scratch-2021/blob/master/.gitignore">.gitignore</a>.</li>
+</ul>
+</li>
+<li>[x] Created actor Diagram</li>
+<li>[x] Created interaction Diagram</li>
+</ul>
+<h3>05-02-2021</h3>
+<ul>
+<li>[x] Render Data in HTML.
+<ul>
+<li>[x] Rendering should be done in the <a href="https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html">index.html</a>.</li>
+</ul>
+</li>
+<li>[x] Conduct a code review.</li>
+</ul>
+<h3>03-02-2021</h3>
+<ul>
+<li>[x] Add new tasks in backlog.</li>
+<li>[x] Fix checkbox in changelog.</li>
+<li>[x] Add external data section incl. response.</li>
+<li>[x] Start markdown.</li>
+</ul>
+<h2>BACKLOG</h2>
+<ul>
+<li>[x] Fetch Data from spaceX API.
+<ul>
+<li>[ ] Store response in localStorage</li>
+</ul>
+</li>
+<li>[ ] Create routing
+<ul>
+<li>[ ] Develop it in such manner it creates clean slugs.</li>
+</ul>
+</li>
+<li>[ ] Extend diagrams as development goes on.</li>
+</ul>
+<h1>SOURCES</h1>
+<ul>
+<li><a href="https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba">License badges, lukas-h, 2021.</a></li>
+<li><a href="https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/">readme banner, spaceflightinsider.com, 2021.</a></li>
+</ul>
+<!-- Add a link to your live demo in Github Pages 🌐-->
+<!-- ☝️ replace this description with a description of your own work -->
+<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+<!-- Maybe a table of contents here? 📚 -->
+<!-- How about a section that describes how to install this project? 🤓 -->
+<!-- ...but how does one use this project? What are its features 🤔 -->
+<!-- What external data source is featured in your project and what are its properties 🌠 -->
+<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+<hr>
+<p><em>I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems and images are registered trademarks of their respective owners.</em></p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Tue Feb 09 2021 08:43:35 GMT+0100 (Central European Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
