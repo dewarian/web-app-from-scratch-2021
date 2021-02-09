@@ -11,6 +11,7 @@
         "sourceType": "module"
     },
     "rules": {
+      "no-implicit-globals":"warn"
     },
     "plugins": ["prettier"]
 }
