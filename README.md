@@ -135,10 +135,10 @@ GET https://api.spacexdata.com/v4/launches/latest
 
 # BREAKDOWN APPLICATION
 ## Actor Diagram
-![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png)
+![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png?raw=true)
 
 ## Interaction Diagram
-![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png)
+![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png?raw=true)
 
 
 # CHANGELOG
