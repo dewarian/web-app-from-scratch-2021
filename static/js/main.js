@@ -1,3 +1,5 @@
+import { datatest } from './modules/data.js'
+
 const baseUrl = 'https://api.spacexdata.com/v4'
 const endpoint = 'crew'
 const mainContainer = document.querySelector('main')
@@ -39,4 +41,5 @@ const render = (data) => {
 ;(async function () {
   const data = await getData(`${baseUrl}/${endpoint}`)
   render(data)
+  datatest('hehehe')
 })()
