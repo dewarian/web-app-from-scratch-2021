@@ -30,6 +30,6 @@ const dynamicFooterContent = (tagName) => {
   const endpoint = 'crew'
   const data = await getData(`${baseUrl}/${endpoint}`)
   render(data)
-  datatest('hehehe')
+  datatest('Check modularizing')
   dynamicFooterContent('span')
 })()
