@@ -175,6 +175,9 @@ This part of the README is everchanging.
 - [ ] Create routing
   - [ ] Develop it in such manner it creates clean slugs.
 - [ ] Extend diagrams as development goes on.
+
+# Code conventions
+To write clean code this project adheres to specific code conventions written by [standardjs](https://github.com/standard/standard) with ESlint and Prettier.
 # SOURCES
 * [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 * [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
