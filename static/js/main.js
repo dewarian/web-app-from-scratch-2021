@@ -2,18 +2,19 @@ import { datatest, getData } from './modules/data.js'
 import { render } from './modules/render.js'
 
 /**
- * @title Create Dynamic Footer Content
- * @description Creates content to populate the footer
- * @param { String }
+ * @title Add Dynamic Year Content
+ * @description Creates content to populate the specified element
+ * @param {String} tagName HTML element tagName that needs to be created.
+ * @param {String} selector querySelector element it needs to target for insertion.
  */
-const dynamicFooterContent = (tagName) => {
+const addYearContent = (tagName, selector) => {
   const currentYear = new Date().getFullYear()
   const newElement = document.createElement(tagName)
 
   const newContent = document.createTextNode(`, ${currentYear}`)
   newElement.appendChild(newContent)
 
-  const elementSelect = document.querySelector('footer p')
+  const elementSelect = document.querySelector(selector)
   elementSelect.appendChild(newElement)
 }
 
@@ -23,8 +24,7 @@ const dynamicFooterContent = (tagName) => {
 ;(async function () {
   const baseUrl = 'https://api.spacexdata.com/v4'
   const endpoint = 'crew'
-  const data = await getData(`${baseUrl}/${endpoint}`)
-  render(data)
+  render(await getData(`${baseUrl}/${endpoint}`))
   datatest('Check modularizing')
-  dynamicFooterContent('span')
+  addYearContent('span', 'footer p')
 })()
