@@ -15,7 +15,14 @@
       "cleverLinks": false,
       "monospaceLinks": true,
       "useLongnameInNav": false,
-      "showInheritedInNav": true
+      "showInheritedInNav": true,
+      "default": {
+        "staticFiles": {
+          "include": [
+            "./static/assets"
+          ]
+        }
+      }
   },
   "opts": {
       "destination": "./docs/",
