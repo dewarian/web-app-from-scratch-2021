@@ -10,11 +10,11 @@ const dynamicFooterContent = (tagName) => {
   const currentYear = new Date().getFullYear()
   const newElement = document.createElement(tagName)
 
-  const newContent = document.createTextNode(`,${currentYear}`)
+  const newContent = document.createTextNode(`, ${currentYear}`)
   newElement.appendChild(newContent)
 
-  const elementSelect = document.querySelector('footer')
-  document.body.insertBefore(newElement, elementSelect)
+  const elementSelect = document.querySelector('footer p')
+  elementSelect.appendChild(newElement)
 }
 
 /**
