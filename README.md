@@ -204,6 +204,9 @@ This part of the README is everchanging.
 # Code conventions
 
 To write clean code this project adheres to specific code conventions written by [standardjs](https://github.com/standard/standard) with ESlint and Prettier.
+Some of the most notable conventions are;
+
+- Ommitting semicolons and placing them on places that are confusing. Might move to another.
 
 # SOURCES
 

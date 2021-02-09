@@ -1,19 +1,19 @@
-const baseUrl = "https://api.spacexdata.com/v4";
-const endpoint = "crew";
-const mainContainer = document.querySelector("main");
+const baseUrl = 'https://api.spacexdata.com/v4'
+const endpoint = 'crew'
+const mainContainer = document.querySelector('main')
 
 // Insert current year in footer
 document
-  .querySelector("footer span")
-  .insertAdjacentHTML("afterbegin", new Date().getFullYear());
+  .querySelector('footer span')
+  .insertAdjacentHTML('afterbegin', new Date().getFullYear())
 
 /**
  * @description Retrieves data and runs data dependent functionality
  * @param {String} url API endpoint to call.
  */
 const getData = async (url) => {
-  return await fetch(url).then((response) => response.jsoBen());
-};
+  return await fetch(url).then((response) => response.json())
+}
 
 /**
  * @description Function loops through array elements and injects into DOM.
@@ -28,15 +28,15 @@ const render = (data) => {
           <img src="${key.image}" alt="${key.name}">
           <figcaption><a href="#">${key.name}</a>, ${key.agency}</figcaption>
         </figure>
-      `;
-    return mainContainer.insertAdjacentHTML("beforeend", html);
-  });
-};
+      `
+    return mainContainer.insertAdjacentHTML('beforeend', html)
+  })
+}
 
 /**
  * @description immediately self invoking function javascript, executes when block is called.
  */
-(async function () {
-  let data = await getData(`${baseUrl}/${endpoint}`);
-  render(data);
-})();
+;(async function () {
+  const data = await getData(`${baseUrl}/${endpoint}`)
+  render(data)
+})()
