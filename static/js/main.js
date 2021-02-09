@@ -1,11 +1,6 @@
 import { datatest, getData } from './modules/data.js'
 import { render } from './modules/render.js'
 
-// Insert current year in footer
-// document
-//   .querySelector('footer span')
-//   .insertAdjacentHTML('afterbegin', new Date().getFullYear())
-
 /**
  * @title Create Dynamic Footer Content
  * @description Creates content to populate the footer
