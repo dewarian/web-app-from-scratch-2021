@@ -3,44 +3,58 @@
 ![](https://www.spaceflightinsider.com/wp-content/uploads/2015/09/SpaceX-logo-posted-on-SpaceFlight-Insider.png)
 
 ## Table of content
-* [Demo](#demo)
-* [Description](#description)
-* [Installation](#installation)
-* [Usage & Features](#demo)
-* [External Data](#external-data)
-* [Diagrams](#breakdown-application)
-* [Changelog](#changelog)
-* [Sources](#sources)
+
+- [Demo](#demo)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage & Features](#demo)
+- [External Data](#external-data)
+- [Diagrams](#breakdown-application)
+- [Changelog](#changelog)
+- [Sources](#sources)
 
 # DEMO 🌍
+
 Visit the live version of this prototype on [SpaceX WAFS](https://nb-wafs.vercel.app/).
 
 # DESCRIPTION
-Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries. 
 
-The current concept for this web app 
+Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries.
+
+The current concept for this web app
 
 # INSTALLATION
+
 ## Prerequisites
+
 Before you continue with installing this project on your machine make sure your machine has the following;
-* [GIT](https://git-scm.com/)
+
+- [GIT](https://git-scm.com/)
+
 ## Installation
 
 Navigate to a folder where you want to install this application and run the following bash / ZSH command
+
 ```zsh
 git clone https://github.com/dewarian/web-app-from-scratch-2021.git
 ```
+
 # USAGE && FEATURES
+
 Run the project with the extension [live-server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or a similar extension if you don't use [Visual Studio Code](https://code.visualstudio.com/).
+
 # EXTERNAL DATA
+
 Data is being inserted from an external API called [spaceX-API](https://github.com/r-spacex/SpaceX-API) and is created by multiple contributors.
 
 The API is an Open Source REST API for multiple categories of data surrounding SpaceX
 
 To get started with using the API you can send a `GET` request to the following endpoint
+
 ```http
 GET https://api.spacexdata.com/v4/launches/latest
 ```
+
 <details>
 <summary>Response GET request</summary>
 ```JSON
@@ -134,20 +148,27 @@ GET https://api.spacexdata.com/v4/launches/latest
 </details>
 
 # BREAKDOWN APPLICATION
+
 ## Actor Diagram
+
 ![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png?raw=true)
 
 ## Interaction Diagram
-![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png?raw=true)
 
+![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_interaction.png?raw=true)
 
 # CHANGELOG
 
-This part of the README is everchanging. 
+This part of the README is everchanging.
 
 ## CHANGES
 
+### 09-02-2021
+
+- [x] Introducing ESlint and Prettier to this project
+
 ### 08-02-2021
+
 - [x] Solved [issues in Github.](https://github.com/dewarian/web-app-from-scratch-2021/issues)
 - [ ] Start with JSDocs
   - [x] NPM initialize.
@@ -160,27 +181,34 @@ This part of the README is everchanging.
 - [x] Created interaction Diagram
 
 ### 05-02-2021
+
 - [x] Render Data in HTML.
-  - [x] Rendering should be done in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html).  
+  - [x] Rendering should be done in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/index.html).
 - [x] Conduct a code review.
+
 ### 03-02-2021
-- [x] Add new tasks in backlog.  
-- [x] Fix checkbox in changelog. 
-- [x] Add external data section incl. response.  
+
+- [x] Add new tasks in backlog.
+- [x] Fix checkbox in changelog.
+- [x] Add external data section incl. response.
 - [x] Start markdown.
 
 ## BACKLOG
-- [x] Fetch Data from spaceX API. 
+
+- [x] Fetch Data from spaceX API.
   - [ ] Store response in localStorage
 - [ ] Create routing
   - [ ] Develop it in such manner it creates clean slugs.
 - [ ] Extend diagrams as development goes on.
 
 # Code conventions
+
 To write clean code this project adheres to specific code conventions written by [standardjs](https://github.com/standard/standard) with ESlint and Prettier.
+
 # SOURCES
-* [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
-* [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
+
+- [License badges, lukas-h, 2021.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+- [readme banner, spaceflightinsider.com, 2021.](https://www.spaceflightinsider.com/organizations/space-exploration-technologies/spacex-seeks-permission-4425-satellite-internet-constellation/)
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
 <!-- ☝️ replace this description with a description of your own work -->
@@ -200,5 +228,7 @@ To write clean code this project adheres to specific code conventions written by
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
-***
+
+---
+
 _I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems and images are registered trademarks of their respective owners._
