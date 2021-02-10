@@ -1,5 +1,6 @@
 /**
  * @title Check module.data
+ * @function
  * @description Test function
  * @param {String} test A string to check if the modular approach works properly
  */
@@ -8,6 +9,7 @@ export const datatest = (test) => {
 }
 /**
  * @title Retrieve Data from API
+ * @function
  * @description Data retrieval. Use getData when retrieving data from an external API.
  * @param {String} url API endpoint to call.
  */

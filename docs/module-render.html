@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Global - Documentation</title>
+    <title>render - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">render</h1>
     
 
     
@@ -41,9 +41,6 @@
 
 <header>
     
-        <h2>
-        
-        </h2>
         
     
 </header>
@@ -52,45 +49,6 @@
     <div class="container-overview">
     
         
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
 
         
     
@@ -117,14 +75,14 @@
 
     
 
-    <h4 class="name" id="addYearContent"><span class="type-signature"></span>addYearContent<span class="signature">(tagName, selector)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".render"><span class="type-signature">(static) </span>render<span class="signature">(data)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Creates content to populate the specified element</p>
+    <p>Function loops through array elements and injects into DOM.</p>
 </div>
 
 
@@ -160,7 +118,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line11">line 11</a>
+        <a href="modules_render.js.html">modules/render.js</a>, <a href="modules_render.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -168,6 +126,15 @@
 
     
 
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Make it modular, no hardcoded Key names</li>
+        
+            <li>Expand upon the render functionality by extracting html element from this block.</li>
+        </ul>
+    </dd>
     
 </dl>
 
@@ -204,13 +171,13 @@
 
         <tr>
             
-                <td class="name"><code>tagName</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><code>String</code></span>
+<span class="param-type"><code>Array</code></span>
 
 
             
@@ -221,33 +188,7 @@
             
 
             <td class="description last">
-                <p>HTML element tagName that needs to be created.</p>
-                
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>selector</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>String</code></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <p>querySelector element it needs to target for insertion.</p>
+                <p>Array of objects to loop through.</p>
                 
             </td>
         </tr>

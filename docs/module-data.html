@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Global - Documentation</title>
+    <title>data - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">data</h1>
     
 
     
@@ -41,9 +41,6 @@
 
 <header>
     
-        <h2>
-        
-        </h2>
         
     
 </header>
@@ -52,45 +49,6 @@
     <div class="container-overview">
     
         
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
 
         
     
@@ -117,14 +75,14 @@
 
     
 
-    <h4 class="name" id="addYearContent"><span class="type-signature"></span>addYearContent<span class="signature">(tagName, selector)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".datatest"><span class="type-signature">(static) </span>datatest<span class="signature">(test)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Creates content to populate the specified element</p>
+    <p>Test function</p>
 </div>
 
 
@@ -160,7 +118,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line11">line 11</a>
+        <a href="modules_data.js.html">modules/data.js</a>, <a href="modules_data.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -204,7 +162,7 @@
 
         <tr>
             
-                <td class="name"><code>tagName</code></td>
+                <td class="name"><code>test</code></td>
             
 
             <td class="type">
@@ -221,16 +179,125 @@
             
 
             <td class="description last">
-                <p>HTML element tagName that needs to be created.</p>
+                <p>A string to check if the modular approach works properly</p>
                 
             </td>
         </tr>
 
     
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id=".getData"><span class="type-signature">(static) </span>getData<span class="signature">(url)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Data retrieval. Use getData when retrieving data from an external API.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_data.js.html">modules/data.js</a>, <a href="modules_data.js.html#line18">line 18</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
 
         <tr>
             
-                <td class="name"><code>selector</code></td>
+                <td class="name"><code>url</code></td>
             
 
             <td class="type">
@@ -247,7 +314,7 @@
             
 
             <td class="description last">
-                <p>querySelector element it needs to target for insertion.</p>
+                <p>API endpoint to call.</p>
                 
             </td>
         </tr>

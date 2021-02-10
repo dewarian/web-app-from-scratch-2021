@@ -3,6 +3,7 @@ import { render } from './modules/render.js'
 
 /**
  * @title Add Dynamic Year Content
+ * @function
  * @description Creates content to populate the specified element
  * @param {String} tagName HTML element tagName that needs to be created.
  * @param {String} selector querySelector element it needs to target for insertion.

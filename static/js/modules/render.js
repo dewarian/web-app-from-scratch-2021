@@ -1,6 +1,7 @@
 /**
  * @title Render HTML element
  * @description Function loops through array elements and injects into DOM.
+ * @function
  * @todo Make it modular, no hardcoded Key names
  * @todo Expand upon the render functionality by extracting html element from this block.
  * @param {Array} data Array of objects to loop through.
