@@ -64,11 +64,19 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1vw;
   justify-items: center;
+  /* https://dev.to/clairecodes/how-to-create-a-polka-dot-background-with-css-23m0  */
+  background-image: radial-gradient(#00000010 3px, #ffffff00 0px);
+  background-size: 24px 24px;
 }
 
 main article {
   padding: 0.5em;
   background-color: #ffcc00;
+  transition: box-shadow .5s;
+}
+
+main article:hover {
+  box-shadow: 0.3rem 0.3rem #00000050;
 }
 
 main article p {
