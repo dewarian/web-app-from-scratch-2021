@@ -20,7 +20,9 @@ const addYearContent = (tagName, selector) => {
 }
 
 /**
- * @description immediately self invoking function javascript, executes when block is called.
+ * @title IIFE compileApp
+ * @function
+ * @description immediately self invoking function javascript, executes when block is on the stack.
  */
 ;(async function compileApp() {
   // const baseUrl = 'https://api.spacexdata.com/v4'

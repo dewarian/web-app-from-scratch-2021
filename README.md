@@ -201,6 +201,8 @@ This part of the README is everchanging.
 
 ## BACKLOG
 
+- [ ] Implement github action to build docs for github pages instead of `NPM run generate-docs`
+  - [see jsdoc-action](https://github.com/andstor/jsdoc-action)
 - [x] Fetch Data from spaceX API.
   - [ ] Store response in localStorage
 - [ ] Create routing
