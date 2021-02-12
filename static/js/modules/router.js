@@ -9,7 +9,8 @@ export const router = () => {
     },
     // Route to detail
     'detail/:id': async (id) => {
-      console.log(await getData(`https://kitsu.io/api/edge/anime/${id}`))
+      const show = await getData(`https://kitsu.io/api/edge/anime/${id}`)
+      console.log(`${show.data.attributes.startDate}`)
     }
   })
 }
