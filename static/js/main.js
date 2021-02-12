@@ -34,6 +34,7 @@ const addYearContent = (tagName, selector) => {
   console.log(
     await getData(
       'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
+      // 'https://kitsu.io/api/edge/anime/12757'
     )
   )
   addYearContent('span', 'footer p')
