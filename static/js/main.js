@@ -1,4 +1,4 @@
-import { datatest, getData } from './modules/data.js'
+import { getData } from './modules/data.js'
 import { render } from './modules/render.js'
 
 /**
@@ -23,9 +23,18 @@ const addYearContent = (tagName, selector) => {
  * @description immediately self invoking function javascript, executes when block is called.
  */
 ;(async function () {
-  const baseUrl = 'https://api.spacexdata.com/v4'
-  const endpoint = 'crew'
-  render(await getData(`${baseUrl}/${endpoint}`))
-  datatest('Check modularizing')
+  // const baseUrl = 'https://api.spacexdata.com/v4'
+  // const endpoint = 'crew'
+  // render(await getData(`${baseUrl}/${endpoint}`))
+  render(
+    await getData(
+      'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
+    )
+  )
+  console.log(
+    await getData(
+      'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
+    )
+  )
   addYearContent('span', 'footer p')
 })()
