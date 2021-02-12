@@ -1,6 +1,7 @@
 import { getData } from './data.js'
 
 export const router = () => {
+  // eslint-disable-next-line no-undef
   routie({
     // Route to overview
     overview: () => {
