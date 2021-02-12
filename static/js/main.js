@@ -22,7 +22,7 @@ const addYearContent = (tagName, selector) => {
 /**
  * @description immediately self invoking function javascript, executes when block is called.
  */
-;(async () => {
+;(async function compileApp() {
   // const baseUrl = 'https://api.spacexdata.com/v4'
   // const endpoint = 'crew'
   // render(await getData(`${baseUrl}/${endpoint}`))
