@@ -6,20 +6,6 @@
  * @todo Expand upon the render functionality by extracting html element from this block.
  * @param {Array} data Array of objects to loop through.
  */
-// export const render = (data) => {
-//   const mainContainer = document.querySelector('main')
-
-//   Object.values(data).map((key) => {
-//     const html = `
-//         <figure>
-//           <img src="${key.image}" alt="${key.name}">
-//           <figcaption><a href="#">${key.name}</a>, ${key.agency}</figcaption>
-//         </figure>
-//       `
-//     return mainContainer.insertAdjacentHTML('beforeend', html)
-//   })
-// }
-
 export const render = (data) => {
   const mainContainer = document.querySelector('main')
 
@@ -31,6 +17,7 @@ export const render = (data) => {
       <article>
       <img src="${key.attributes.posterImage.small}" alt="${title}">
       <p>${title}</p>
+      <a href="#detail/${key.id}">details</a>
       </article>`
       return mainContainer.insertAdjacentHTML('beforeend', test)
     } else {
@@ -39,17 +26,12 @@ export const render = (data) => {
       <article>
       <img src="${key.attributes.posterImage.small}" alt="${title}">
       <p>${title}</p>
-      </article>`
+      <a href="#detail/${key.id}">details</a>
+      </article>
+      `
       return mainContainer.insertAdjacentHTML('beforeend', test)
     }
   })
-  // Object.values(data).map((key) => {
-  //   const html = `
-  //       <figure>
-  //         <img src="${key.image}" alt="${key.name}">
-  //         <figcaption><a href="#">${key.name}</a>, ${key.agency}</figcaption>
-  //       </figure>
-  //     `
-  //   return mainContainer.insertAdjacentHTML('beforeend', html)
-  // })
 }
+
+const getAvailableTitle = (key) => {}
