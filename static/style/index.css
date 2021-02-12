@@ -58,3 +58,19 @@ footer p > a:hover:before{
 figure > img {
   max-width: 300px;
 }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1vw;
+  justify-items: center;
+}
+
+main article {
+  padding: 0.5em;
+  background-color: #ffcc00;
+}
+
+main article p {
+  max-width: 284px;
+}
