@@ -1,5 +1,3 @@
-import { getData } from './modules/data.js'
-import { render } from './modules/render.js'
 import { router } from './modules/router.js'
 
 /**
@@ -26,21 +24,6 @@ const addYearContent = (tagName, selector) => {
  * @description immediately self invoking function javascript, executes when block is on the stack.
  */
 ;(async function compileApp() {
-  // const baseUrl = 'https://api.spacexdata.com/v4'
-  // const endpoint = 'crew'
-  // render(await getData(`${baseUrl}/${endpoint}`))
-  render(
-    await getData(
-      'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
-    )
-  )
-
-  console.log(
-    await getData(
-      'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
-      // 'https://kitsu.io/api/edge/anime/12757'
-    )
-  )
   addYearContent('span', 'footer p')
   router()
 })()

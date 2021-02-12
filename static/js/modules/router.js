@@ -1,16 +1,28 @@
 import { getData } from './data.js'
+import { render, renderDetail } from './render.js'
 
 export const router = () => {
   // eslint-disable-next-line no-undef
   routie({
     // Route to overview
-    overview: () => {
-      console.log('hi')
+    overview: async () => {
+      render(
+        await getData(
+          'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
+        )
+      )
     },
     // Route to detail
     'detail/:id': async (id) => {
-      const show = await getData(`https://kitsu.io/api/edge/anime/${id}`)
-      console.log(`${show.data.attributes.startDate}`)
+      const details = await getData(`https://kitsu.io/api/edge/anime/${id}`)
+      renderDetail(details)
+    },
+    '*': async () => {
+      render(
+        await getData(
+          'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
+        )
+      )
     }
   })
 }

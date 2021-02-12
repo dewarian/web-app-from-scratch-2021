@@ -15,12 +15,27 @@ export const render = (data) => {
         ? key.attributes.titles.en_jp
         : key.attributes.titles.en
 
-    const test = `
+    const overViewItem = `
     <article>
     <img src="${key.attributes.posterImage.small}" alt="${title}">
     <p>${title}</p>
     <a href="#detail/${key.id}">details</a>
     </article>`
-    return mainContainer.insertAdjacentHTML('beforeend', test)
+    return mainContainer.insertAdjacentHTML('beforeend', overViewItem)
   })
+}
+
+export const renderDetail = (data) => {
+  const mainContainer = document.querySelector('main')
+  while (mainContainer.firstChild) {
+    mainContainer.removeChild(mainContainer.firstChild)
+  }
+  const detailArticle = `
+    <article class="detail">
+    <img src="${data.data.attributes.posterImage.small}" alt="">
+    <p>${data.data.attributes.description}</p>
+    <p>${data.data.attributes.startDate}</p>
+    </article>
+  `
+  return mainContainer.insertAdjacentHTML('beforeend', detailArticle)
 }
