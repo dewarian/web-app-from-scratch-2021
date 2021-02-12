@@ -16,6 +16,7 @@
 # DEMO 🌍
 
 Visit the live version of this prototype on [SpaceX WAFS](https://nb-wafs.vercel.app/).
+[JSDocs documentation](https://dewarian.github.io/web-app-from-scratch-2021/)
 
 # DESCRIPTION
 
