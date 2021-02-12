@@ -16,13 +16,13 @@ const addYearContent = (tagName, selector) => {
   newElement.appendChild(newContent)
 
   const elementSelect = document.querySelector(selector)
-  elementSelect.appendChild(newElement)
+  return elementSelect.appendChild(newElement)
 }
 
 /**
  * @description immediately self invoking function javascript, executes when block is called.
  */
-;(async function () {
+;(async () => {
   // const baseUrl = 'https://api.spacexdata.com/v4'
   // const endpoint = 'crew'
   // render(await getData(`${baseUrl}/${endpoint}`))
