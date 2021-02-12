@@ -1,5 +1,5 @@
 /**
- * @title Render HTML element
+ * @title Render Overview
  * @description Function loops through array elements and injects into DOM.
  * @function
  * @todo Make it modular, no hardcoded Key names
@@ -25,6 +25,12 @@ export const render = (data) => {
   })
 }
 
+/**
+ * @title Render Detail content
+ * @function
+ * @description Function removes existing child nodes of specified parent and populates with detail information.
+ * @param {Object} data Object of data to populate DOM
+ */
 export const renderDetail = (data) => {
   const mainContainer = document.querySelector('main')
   while (mainContainer.firstChild) {
