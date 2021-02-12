@@ -1,5 +1,6 @@
 import { getData } from './modules/data.js'
 import { render } from './modules/render.js'
+import { router } from './modules/router.js'
 
 /**
  * @title Add Dynamic Year Content
@@ -33,6 +34,7 @@ const addYearContent = (tagName, selector) => {
       'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
     )
   )
+
   console.log(
     await getData(
       'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20'
@@ -40,4 +42,5 @@ const addYearContent = (tagName, selector) => {
     )
   )
   addYearContent('span', 'footer p')
+  router()
 })()
