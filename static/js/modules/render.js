@@ -28,16 +28,18 @@ export const render = (data) => {
       const title = key.attributes.titles.en_jp
 
       const test = `
-      <h1>${title}</h1>
-      <img src="${key.attributes.posterImage.small}" alt="${key.name}">`
-
+      <article>
+      <img src="${key.attributes.posterImage.small}" alt="${title}">
+      <p>${title}</p>
+      </article>`
       return mainContainer.insertAdjacentHTML('beforeend', test)
     } else {
       const title = key.attributes.titles.en
       const test = `
-      <h1>${title}</h1>
-      <img src="${key.attributes.posterImage.small}" alt="${key.name}">`
-
+      <article>
+      <img src="${key.attributes.posterImage.small}" alt="${title}">
+      <p>${title}</p>
+      </article>`
       return mainContainer.insertAdjacentHTML('beforeend', test)
     }
   })
