@@ -34,4 +34,8 @@ export const render = (data) => {
   })
 }
 
-const getAvailableTitle = (key) => {}
+const getAvailableTitle = (key) => {
+  return key === undefined
+    ? key.attributes.title.en_jp
+    : key.attributes.title.en
+}
