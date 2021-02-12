@@ -1,11 +1,14 @@
-const router = new Navigator('/')
+import { getData } from './data.js'
 
-/*
-  Overview page ('/')
-*/
-router.on('')
-
-/*
-  Detail page per anime
-  ('anime/id')
-*/
+export const router = () => {
+  routie({
+    // Route to overview
+    overview: () => {
+      console.log('hi')
+    },
+    // Route to detail
+    'detail/:id': async (id) => {
+      console.log(await getData(`https://kitsu.io/api/edge/anime/${id}`))
+    }
+  })
+}
