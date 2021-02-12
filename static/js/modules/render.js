@@ -10,32 +10,17 @@ export const render = (data) => {
   const mainContainer = document.querySelector('main')
 
   data.data.map((key) => {
-    if (key.attributes.titles.en === undefined) {
-      const title = key.attributes.titles.en_jp
+    const title =
+      key.attributes.titles.en === undefined
+        ? key.attributes.titles.en_jp
+        : key.attributes.titles.en
 
-      const test = `
-      <article>
-      <img src="${key.attributes.posterImage.small}" alt="${title}">
-      <p>${title}</p>
-      <a href="#detail/${key.id}">details</a>
-      </article>`
-      return mainContainer.insertAdjacentHTML('beforeend', test)
-    } else {
-      const title = key.attributes.titles.en
-      const test = `
-      <article>
-      <img src="${key.attributes.posterImage.small}" alt="${title}">
-      <p>${title}</p>
-      <a href="#detail/${key.id}">details</a>
-      </article>
-      `
-      return mainContainer.insertAdjacentHTML('beforeend', test)
-    }
+    const test = `
+    <article>
+    <img src="${key.attributes.posterImage.small}" alt="${title}">
+    <p>${title}</p>
+    <a href="#detail/${key.id}">details</a>
+    </article>`
+    return mainContainer.insertAdjacentHTML('beforeend', test)
   })
-}
-
-const getAvailableTitle = (key) => {
-  return key === undefined
-    ? key.attributes.title.en_jp
-    : key.attributes.title.en
 }
