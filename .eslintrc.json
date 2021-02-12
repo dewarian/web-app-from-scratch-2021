@@ -11,7 +11,8 @@
         "sourceType": "module"
     },
     "rules": {
-      "no-implicit-globals":"warn"
+      "no-implicit-globals":"warn",
+      "space-before-function-paren": "off"
     },
     "plugins": ["prettier"]
 }
