@@ -6,6 +6,7 @@
 
 - [Demo](#demo)
 - [Description](#description)
+- [Concept](#concept)
 - [Installation](#installation)
 - [Usage & Features](#demo)
 - [External Data](#external-data)
@@ -20,9 +21,13 @@ Visit the live version of this prototype on [SpaceX WAFS](https://nb-wafs.vercel
 
 # DESCRIPTION
 
-Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries.
+Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries
 
-The current concept for this web app
+# CONCEPT
+
+The concept is to visualize the crewmates that went into space with SpaceX and give insight to what each crewmate has done so far.
+
+Written in vanilla CSS HTML, and **JS**.
 
 # INSTALLATION
 
