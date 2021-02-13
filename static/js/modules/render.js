@@ -47,11 +47,9 @@ export const renderDetail = (data) => {
     <article id="detail">
       <section>
         <img src="${data.data.attributes.posterImage.small}" alt="">
-        <a href="https:/twist.moe/a/${data.data.attributes.slug}" target="_blank">${title}</a>
-        
+        <p>${title}</p>
       </section>
       <section>
-      
       <p>${data.data.attributes.description}</p>
       <p>${data.data.attributes.startDate}</p>
       </section>
