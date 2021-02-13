@@ -8,7 +8,9 @@
  */
 export const render = (data) => {
   const mainContainer = document.querySelector('main')
-
+  while (mainContainer.firstChild) {
+    mainContainer.removeChild(mainContainer.firstChild)
+  }
   data.data.map((key) => {
     const title =
       key.attributes.titles.en === undefined
@@ -36,11 +38,21 @@ export const renderDetail = (data) => {
   while (mainContainer.firstChild) {
     mainContainer.removeChild(mainContainer.firstChild)
   }
+  const title =
+    data.data.attributes.titles.en === undefined
+      ? data.data.attributes.titles.en_jp
+      : data.data.attributes.titles.en
+
   const detailArticle = `
-    <article class="detail">
-    <img src="${data.data.attributes.posterImage.small}" alt="">
-    <p>${data.data.attributes.description}</p>
-    <p>${data.data.attributes.startDate}</p>
+    <article id="detail">
+      <section>
+        <img src="${data.data.attributes.posterImage.small}" alt="">
+        <p>${title}</p>
+      </section>
+      <section>
+      <p>${data.data.attributes.description}</p>
+      <p>${data.data.attributes.startDate}</p>
+      </section>
     </article>
   `
   return mainContainer.insertAdjacentHTML('beforeend', detailArticle)

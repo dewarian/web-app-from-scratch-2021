@@ -20,6 +20,7 @@ export const router = () => {
     // Route to detail
     'detail/:id': async (id) => {
       const details = await getData(`https://kitsu.io/api/edge/anime/${id}`)
+      console.log(details)
       return renderDetail(details)
     },
     // Wildcard URI, catching first opening. Last as routie iterates and listens to order.

@@ -7,6 +7,12 @@
   padding: 0;
 }
 
+body {
+    /* https://dev.to/clairecodes/how-to-create-a-polka-dot-background-with-css-23m0  */
+    background-image: radial-gradient(#00000010 3px, #ffffff00 0px);
+    background-size: 24px 24px;
+}
+
 #logo > svg {
   width: 10vw;
 }
@@ -64,9 +70,6 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1vw;
   justify-items: center;
-  /* https://dev.to/clairecodes/how-to-create-a-polka-dot-background-with-css-23m0  */
-  background-image: radial-gradient(#00000010 3px, #ffffff00 0px);
-  background-size: 24px 24px;
 }
 
 main article {
@@ -81,4 +84,15 @@ main article:hover {
 
 main article p {
   max-width: 284px;
+}
+
+#detail {
+  display: inline-grid;
+  background-color: #EBFCFB;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1em;
+}
+
+#detail section:nth-child(2) {
+  grid-column: 2 / 3;
 }
