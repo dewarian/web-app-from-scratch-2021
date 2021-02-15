@@ -207,7 +207,8 @@ __proto__: Object
 
 ## Actor Diagram
 
-![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/diagram_actor.png?raw=true)
+![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/new_diagram_actor.png?raw=true)
+![](https://github.com/dewarian/web-app-from-scratch-2021/blob/master/static/assets/new_diagram_interaction.png?raw=true)
 
 ## Interaction Diagram
 
