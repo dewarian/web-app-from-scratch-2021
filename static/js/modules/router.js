@@ -11,11 +11,10 @@ export const router = () => {
   routie({
     // Route to overview
     overview: async () => {
-      return render(
-        await getData(
-          'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
-        )
+      const getOverview = await getData(
+        'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
       )
+      return render(getOverview)
     },
     // Route to detail
     'detail/:id': async (id) => {
@@ -25,11 +24,10 @@ export const router = () => {
     },
     // Wildcard URI, catching first opening. Last as routie iterates and listens to order.
     '*': async () => {
-      return render(
-        await getData(
-          'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
-        )
+      const getOverview = await getData(
+        'https://kitsu.io/api/edge/anime?filter[seasonYear]=2021&[season]=winter&page[limit]=20&page[offset]=0'
       )
+      return render(getOverview)
     }
   })
 }
