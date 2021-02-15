@@ -48,6 +48,10 @@ Navigate to a folder where you want to install this application and run the foll
 git clone https://github.com/dewarian/web-app-from-scratch-2021.git
 ```
 
+# USAGE && FEATURES
+
+Run the project with the extension [live-server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or a similar extension if you don't use [Visual Studio Code](https://code.visualstudio.com/).
+
 # CONVENTIONS
 
 ## Code conventions
@@ -90,10 +94,6 @@ I have updated the JSDocs and want to commit this to the repo, my commit message
 the :memo: emoji has the description of **_Add or update documentation_** which highlights the commit does something with documentation.
 
 I was dabbling between bracketed notation or gitmoji, but decided to go with gitmoji as this project isn't as big that it needs a bracket notation.
-
-# USAGE && FEATURES
-
-Run the project with the extension [live-server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or a similar extension if you don't use [Visual Studio Code](https://code.visualstudio.com/).
 
 # EXTERNAL DATA
 
