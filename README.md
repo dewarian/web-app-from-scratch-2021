@@ -1,6 +1,6 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
 
-![](https://www.spaceflightinsider.com/wp-content/uploads/2015/09/SpaceX-logo-posted-on-SpaceFlight-Insider.png)
+![](https://miro.medium.com/max/2800/1*K_GsJOj3T2ATvSVtT-YWEA.png)
 
 ## Table of content
 
@@ -8,6 +8,7 @@
 - [Description](#description)
 - [Concept](#concept)
 - [Installation](#installation)
+- [Conventions](#conventions)
 - [Usage & Features](#demo)
 - [External Data](#external-data)
 - [Diagrams](#breakdown-application)
@@ -25,7 +26,9 @@ Web-App-From-Scratch is a course from the [minor Web Development And Design](htt
 
 # CONCEPT
 
-The concept is to visualize the crewmates that went into space with SpaceX and give insight to what each crewmate has done so far.
+The new concept of this application would be displaying the newest releases of anime. The user can find more information about a particular anime by going to the details of said anime.
+
+_My previous concept was to visualize the crewmates of SpaceX and which endeavours they went through. This sadly became quite complex as there werent many crewmates and not all crewmate information was complete to show a detail page._
 
 Written in vanilla CSS HTML, and **JS**.
 
@@ -39,11 +42,54 @@ Before you continue with installing this project on your machine make sure your 
 
 ## Installation
 
-Navigate to a folder where you want to install this application and run the following bash / ZSH command
+Navigate to a folder where you want to install this application and run the following BASH / ZSH command
 
 ```zsh
 git clone https://github.com/dewarian/web-app-from-scratch-2021.git
 ```
+
+# CONVENTIONS
+
+## Code conventions
+
+To write clean code this project adheres to specific code conventions written by [standardjs](https://github.com/standard/standard) with ESlint and Prettier.
+Some of the most notable conventions are;
+
+- Ommitting semicolons and placing them on places that are confusing. Might move to another.
+
+Other prettier tasks that are enforced whenever saved:
+
+- tabwidth: 2 spaces
+- useTabs: Absolutely not.
+- ES6 Arrows: always use parentheses.
+- BracketSpacing: Spaces between.
+- SingleQuote: Enforce, no double quotes.
+- Trailing comma: none.
+
+## Git conventions
+
+To enforce structure throughout the whole project I will also implement a structure within the git commits itself.
+this will be done by the principle of [gitmojis](https://gitmoji.dev).
+
+- Starts with emoji, max 50 - 72 characters (excl. char for emoji).
+- When solving an issue, issue id by number is appended to the title. If multiple issues then in the body with how.
+- Empty line before the body.
+- Body when needed contains information what has been done, or why it doesn't do something.
+
+The idea behind gitmojis is that a commit message contains an emoji to indicate what has happened in a particular commit.
+
+see the following example:
+I have updated the JSDocs and want to commit this to the repo, my commit message contains the following.
+
+```Markdown
+📝 Update JSDocs #111
+<!-- Empty Line -->
+<!-- Git Commit Message Body -->
+```
+
+the :memo: emoji has the description of **_Add or update documentation_** which highlights the commit does something with documentation.
+
+I was dabbling between bracketed notation or gitmoji, but decided to go with gitmoji as this project isn't as big that it needs a bracket notation.
 
 # USAGE && FEATURES
 
@@ -51,106 +97,110 @@ Run the project with the extension [live-server](https://marketplace.visualstudi
 
 # EXTERNAL DATA
 
-Data is being inserted from an external API called [spaceX-API](https://github.com/r-spacex/SpaceX-API) and is created by multiple contributors.
+Data is retrieved from the [Kitsu API](https://kitsu.docs.apiary.io/) Which uses the JSON:API specification. JSON:API is a specification for how a client should request resources be fetched or modified, and how a server should respond to the requests.
 
-The API is an Open Source REST API for multiple categories of data surrounding SpaceX
-
-To get started with using the API you can send a `GET` request to the following endpoint
+The client sends a `GET` request to the API and retrieves an array of objects.
 
 ```http
-GET https://api.spacexdata.com/v4/launches/latest
+GET https://kitsu.io/api/edge/anime
 ```
 
 <details>
 <summary>Response GET request</summary>
-```JSON
-{
-  "fairings": null,
-  "links": {
-    "patch": {
-      "small": "https://images2.imgbox.com/eb/0f/Vev7xkUX_o.png",
-      "large": "https://images2.imgbox.com/ab/79/Wyc9K7fv_o.png"
-    },
-    "reddit": {
-      "campaign": "https://www.reddit.com/r/spacex/comments/fjf6rr/dm2_launch_campaign_thread/",
-      "launch": "https://www.reddit.com/r/spacex/comments/glwz6n/rspacex_cctcap_demonstration_mission_2_general",
-      "media": "https://www.reddit.com/r/spacex/comments/gp1gf5/rspacex_dm2_media_thread_photographer_contest/",
-      "recovery": "https://www.reddit.com/r/spacex/comments/gu5gkd/cctcap_demonstration_mission_2_stage_1_recovery/"
-    },
-    "flickr": {
-      "small": [],
-      "original": [
-        "https://live.staticflickr.com/65535/49927519643_b43c6d4c44_o.jpg",
-        "https://live.staticflickr.com/65535/49927519588_8a39a3994f_o.jpg",
-        "https://live.staticflickr.com/65535/49928343022_6fb33cbd9c_o.jpg",
-        "https://live.staticflickr.com/65535/49934168858_cacb00d790_o.jpg",
-        "https://live.staticflickr.com/65535/49934682271_fd6a31becc_o.jpg",
-        "https://live.staticflickr.com/65535/49956109906_f88d815772_o.jpg",
-        "https://live.staticflickr.com/65535/49956109706_cffa847208_o.jpg",
-        "https://live.staticflickr.com/65535/49956109671_859b323ede_o.jpg",
-        "https://live.staticflickr.com/65535/49955609618_4cca01d581_o.jpg",
-        "https://live.staticflickr.com/65535/49956396622_975c116b71_o.jpg",
-        "https://live.staticflickr.com/65535/49955609378_9b77e5c771_o.jpg",
-        "https://live.staticflickr.com/65535/49956396262_ef41c1d9b0_o.jpg"
-      ]
-    },
-    "presskit": "https://www.nasa.gov/sites/default/files/atoms/files/commercialcrew_press_kit.pdf",
-    "webcast": "https://youtu.be/xY96v0OIcK4",
-    "youtube_id": "xY96v0OIcK4",
-    "article": "https://spaceflightnow.com/2020/05/30/nasa-astronauts-launch-from-us-soil-for-first-time-in-nine-years/",
-    "wikipedia": "https://en.wikipedia.org/wiki/Crew_Dragon_Demo-2"
-  },
-  "static_fire_date_utc": "2020-05-22T17:39:00.000Z",
-  "static_fire_date_unix": 1590169140,
-  "tdb": false,
-  "net": false,
-  "window": 0,
-  "rocket": "5e9d0d95eda69973a809d1ec",
-  "success": true,
-  "failures": [],
-  "details": "SpaceX will launch the second demonstration mission of its Crew Dragon vehicle as part of NASA's Commercial Crew Transportation Capability Program (CCtCap), carrying two NASA astronauts to the International Space Station. Barring unexpected developments, this mission will be the first crewed flight to launch from the United States since the end of the Space Shuttle program in 2011. DM-2 demonstrates the Falcon 9 and Crew Dragon's ability to safely transport crew to the space station and back to Earth and it is the last major milestone for certification of Crew Dragon. Initially the mission duration was planned to be no longer than two weeks, however NASA has been considering an extension to as much as six weeks or three months. The astronauts have been undergoing additional training for the possible longer mission.",
-  "crew": [
-    "5ebf1b7323a9a60006e03a7b",
-    "5ebf1a6e23a9a60006e03a7a"
-  ],
-  "ships": [
-    "5ea6ed30080df4000697c913",
-    "5ea6ed2f080df4000697c90b",
-    "5ea6ed2f080df4000697c90c",
-    "5ea6ed2e080df4000697c909",
-    "5ea6ed2f080df4000697c90d"
-  ],
-  "capsules": [
-    "5e9e2c5df359188aba3b2676"
-  ],
-  "payloads": [
-    "5eb0e4d1b6c3bb0006eeb257"
-  ],
-  "launchpad": "5e9e4502f509094188566f88",
-  "auto_update": true,
-  "flight_number": 94,
-  "name": "CCtCap Demo Mission 2",
-  "date_utc": "2020-05-30T19:22:00.000Z",
-  "date_unix": 1590866520,
-  "date_local": "2020-05-30T15:22:00-04:00",
-  "date_precision": "hour",
-  "upcoming": false,
-  "cores": [
-    {
-      "core": "5e9e28a7f3591817f23b2663",
-      "flight": 1,
-      "gridfins": true,
-      "legs": true,
-      "reused": false,
-      "landing_attempt": true,
-      "landing_success": true,
-      "landing_type": "ASDS",
-      "landpad": "5e9e3032383ecb6bb234e7ca"
-    }
-  ],
-  "id": "5eb87d46ffd86e000604b388"
-}
-```
+<pre>
+<code>
+{data: Array(20), meta: {…}, links: {…}}
+  data: Array(20)
+  0:
+  attributes:
+  abbreviatedTitles: []
+  ageRating: "G"
+  ageRatingGuide: null
+  averageRating: null
+  canonicalTitle: "Shikizakura"
+  coverImage: {tiny: "https://media.kitsu.io/anime/cover_images/42330/tiny.jpg?1597702706", small: "https://media.kitsu.io/anime/cover_images/42330/small.jpg?1597702706", large: "https://media.kitsu.io/anime/cover_images/42330/large.jpg?1597702706", original: "https://media.kitsu.io/anime/cover_images/42330/original.jpg?1597702706", meta: {…}}
+  coverImageTopOffset: 0
+  createdAt: "2019-05-06T05:39:34.845Z"
+  description: ""
+  endDate: null
+  episodeCount: 12
+  episodeLength: null
+  favoritesCount: 0
+  nextRelease: null
+  nsfw: false
+  popularityRank: 4384
+  posterImage: {tiny: "https://media.kitsu.io/anime/poster_images/42330/tiny.jpg?1597697091", small: "https://media.kitsu.io/anime/poster_images/42330/small.jpg?1597697091", medium: "https://media.kitsu.io/anime/poster_images/42330/medium.jpg?1597697091", large: "https://media.kitsu.io/anime/poster_images/42330/large.jpg?1597697091", original: "https://media.kitsu.io/anime/poster_images/42330/original.jpg?1597697091", …}
+  ratingFrequencies: {8: "2", 9: "0", 10: "0", 12: "0", 15: "0", 16: "0", 20: "4"}
+  ratingRank: null
+  showType: "TV"
+  slug: "shikizakura"
+  startDate: "2021-12-31"
+  status: "unreleased"
+  subtype: "TV"
+  synopsis: ""
+  tba: "2021"
+  titles: {en_jp: "Shikizakura", ja_jp: "シキザクラ"}
+  totalLength: 0
+  updatedAt: "2021-02-15T06:00:07.244Z"
+  userCount: 1239
+  youtubeVideoId: null
+  __proto__: Object
+  id: "42330"
+  links:
+  self: "https://kitsu.io/api/edge/anime/42330"
+  __proto__: Object
+  relationships:
+  animeCharacters: {links: {…}}
+  animeProductions: {links: {…}}
+  animeStaff: {links: {…}}
+  castings: {links: {…}}
+  categories: {links: {…}}
+  characters: {links: {…}}
+  episodes: {links: {…}}
+  genres: {links: {…}}
+  installments: {links: {…}}
+  mappings: {links: {…}}
+  mediaRelationships: {links: {…}}
+  productions: {links: {…}}
+  quotes: {links: {…}}
+  reviews: {links: {…}}
+  staff: {links: {…}}
+  streamingLinks: {links: {…}}
+  __proto__: Object
+  type: "anime"
+  __proto__: Object
+  1: {id: "43915", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  2: {id: "43750", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  3: {id: "43991", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  4: {id: "43992", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  5: {id: "43905", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  6: {id: "43862", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  7: {id: "43047", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  8: {id: "43683", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  9: {id: "44009", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  10: {id: "43097", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  11: {id: "43859", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  12: {id: "43833", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  13: {id: "43244", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  14: {id: "43825", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  15: {id: "43897", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  16: {id: "42898", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  17: {id: "43829", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  18: {id: "43716", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  19: {id: "43807", type: "anime", links: {…}, attributes: {…}, relationships: {…}}
+  length: 20
+  __proto__: Array(0)
+  links:
+  first: "https://kitsu.io/api/edge/anime?filter%5BseasonYear%5D=2021&page%5Blimit%5D=20&page%5Boffset%5D=0"
+  last: "https://kitsu.io/api/edge/anime?filter%5BseasonYear%5D=2021&page%5Blimit%5D=20&page%5Boffset%5D=108"
+  next: "https://kitsu.io/api/edge/anime?filter%5BseasonYear%5D=2021&page%5Blimit%5D=20&page%5Boffset%5D=20"
+  __proto__: Object
+  meta:
+  count: 128
+  __proto__: Object
+__proto__: Object
+</code>
+</pre>
 </details>
 
 # BREAKDOWN APPLICATION
@@ -169,6 +219,18 @@ This part of the README is everchanging.
 
 ## CHANGES
 
+### 15-02-2021
+
+- [x] Update readme to current concept
+- [x] Solve issues
+
+### 12-02-2021
+
+- [x] Switch concept
+  - [x] Implement routing
+  - [x] Implement detail page
+- [x] Solve issues
+
 ### 09-02-2021
 
 - [x] Introducing ESlint and Prettier to this project
@@ -176,7 +238,7 @@ This part of the README is everchanging.
 ### 08-02-2021
 
 - [x] Solved [issues in Github.](https://github.com/dewarian/web-app-from-scratch-2021/issues)
-- [ ] Start with JSDocs
+- [x] Start with JSDocs
   - [x] NPM initialize.
   - [x] JSDoc theme
 - [x] Cleansed repo
@@ -201,21 +263,22 @@ This part of the README is everchanging.
 
 ## BACKLOG
 
-- [ ] Update readme to reflect the project.
+### Must
+
+- [ ] Update content Detail page.
+- [ ] Update Diagrams to reflect change of API.
+
+### Could
+
+- [ ] Pagination of anime.
+  - [ ] Back and Next button to navigate pages.
+- [ ] Implement localStorage.
+- [ ] Implement user interaction.
+- [ ] Modularize HTML generation.
+- [ ] Add interaction to the overview page.
 - [ ] Implement github action to build docs for github pages instead of `NPM run generate-docs`
   - [see jsdoc-action](https://github.com/andstor/jsdoc-action)
-- [x] Fetch Data from spaceX API.
-  - [ ] Store response in localStorage
-- [ ] Create routing
-  - [ ] Develop it in such manner it creates clean slugs.
-- [ ] Extend diagrams as development goes on.
-
-# Code conventions
-
-To write clean code this project adheres to specific code conventions written by [standardjs](https://github.com/standard/standard) with ESlint and Prettier.
-Some of the most notable conventions are;
-
-- Ommitting semicolons and placing them on places that are confusing. Might move to another.
+- [x] ~~Fetch Data from spaceX API.~~
 
 # SOURCES
 
@@ -243,4 +306,4 @@ Some of the most notable conventions are;
 
 ---
 
-_I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems and images are registered trademarks of their respective owners._
+_I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with Kitsu.io, or any of its subsidiaries or its affiliates. The names Kitsu as well as related names, marks, emblems and images are registered trademarks of their respective owners._
