@@ -1,3 +1,4 @@
+import { createContent } from './modules/createContent.js'
 import { router } from './modules/router.js'
 
 /**
@@ -25,5 +26,16 @@ const addYearContent = (tagName, selector) => {
  */
 ;(async function compileApp() {
   addYearContent('span', 'footer p')
-  router()
+  document.onreadystatechange = function () {
+    if (document.readyState === 'loading') {
+      console.log('LOADING')
+    } else if (document.readyState === 'interactive') {
+      console.log('test')
+    } else if (document.readyState === 'complete') {
+      router()
+    } else {
+      console.log('nani')
+    }
+  }
+  createContent('details', ['one', 'two', 'three'])
 })()

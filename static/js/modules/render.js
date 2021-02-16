@@ -45,16 +45,17 @@ export const renderDetail = (data) => {
       : data.data.attributes.titles.en
 
   const detailArticle = `
-    <article id="detail">
-      <section>
-        <img src="${data.data.attributes.posterImage.small}" alt="">
-        <p>${title}</p>
-      </section>
-      <section>
-      <p>${data.data.attributes.description}</p>
-      <p>${data.data.attributes.startDate}</p>
-      </section>
-    </article>
+  <article id="detail">
+  <section>
+  <img src="${data.data.attributes.posterImage.small}" alt="">
+  <p>${title}</p>
+  </section>
+  <section>
+  <p>${data.data.attributes.description}</p>
+  <p>${data.data.attributes.startDate}</p>
+  </section>
+  <a id="button" href="#overview"><span>Back</span></a>
+  </article>
   `
   return mainContainer.insertAdjacentHTML('beforeend', detailArticle)
 }
