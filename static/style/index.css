@@ -76,11 +76,12 @@ figure > img {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1vw;
+  grid-gap: 1em;
   justify-items: center;
 }
 
 main article {
+  height: 496px;
   padding: 0.5em;
   background-color: #EEEEEE;
   transition: box-shadow .5s;
