@@ -18,11 +18,12 @@ export const render = (data) => {
         : key.attributes.titles.en
 
     const overViewItem = `
+    <a href="#detail/${key.id}">
     <article>
     <img src="${key.attributes.posterImage.small}" alt="${title}">
     <p>${title}</p>
-    <a href="#detail/${key.id}">details</a>
-    </article>`
+    </article>
+    </a>`
     return mainContainer.insertAdjacentHTML('beforeend', overViewItem)
   })
 }

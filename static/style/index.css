@@ -13,13 +13,14 @@ body {
     background-size: 24px 24px;
 }
 
-#logo > svg {
-  width: 10vw;
+#logo {
+  display: flex;
+  justify-content: center;
 }
 
-.fill-white{
-  color: white;
-  background-color: white;
+#logo > img {
+  max-width: 68px;
+  filter:grayscale(1)
 }
 
 nav {
@@ -28,6 +29,7 @@ nav {
   padding-left: 2em;
   padding-bottom: 1em;
   border: 1px solid black;
+  margin-bottom: 0.5em;
 }
 
 
@@ -36,6 +38,12 @@ nav {
     ************
     @Sources https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
 footer p > a{
   text-decoration: none;
   color: #000;
@@ -74,7 +82,7 @@ main {
 
 main article {
   padding: 0.5em;
-  background-color: #ffcc00;
+  background-color: #EEEEEE;
   transition: box-shadow .5s;
 }
 
@@ -97,6 +105,6 @@ main article p {
   grid-column: 2 / 3;
 }
 
-.test {
-  color: #ffcc00;
+a {
+  text-decoration: none;
 }
