@@ -80,14 +80,14 @@ main {
   justify-items: center;
 }
 
-main article {
+main a {
   height: 496px;
   padding: 0.5em;
   background-color: #EEEEEE;
   transition: box-shadow .5s;
 }
 
-main article:hover {
+main a:hover {
   box-shadow: 0.3rem 0.3rem #00000050;
 }
 
