@@ -1,4 +1,3 @@
-import { createContent } from './modules/createContent.js'
 import { router } from './modules/router.js'
 
 /**
@@ -23,6 +22,8 @@ const addYearContent = (tagName, selector) => {
  * @title IIFE compileApp
  * @function
  * @description immediately self invoking function javascript, executes when block is on the stack.
+ * @todo Remove console.log, Currently testing the working of the onreadystatechange. As of 19-2 it only slows down my the retrieval
+ * @todo commented createContent out to clean the console.
  */
 ;(async function compileApp() {
   addYearContent('span', 'footer p')
@@ -37,5 +38,5 @@ const addYearContent = (tagName, selector) => {
       console.log('nani')
     }
   }
-  createContent('details', ['one', 'two', 'three'])
+  // createContent('details', ['one', 'two', 'three'])
 })()
