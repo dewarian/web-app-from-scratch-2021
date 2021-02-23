@@ -24,7 +24,8 @@ export const render = (data) => {
         <p>${title}</p>
       </article>
     </a>`
-    return mainContainer.insertAdjacentHTML('beforeend', overViewItem)
+    mainContainer.insertAdjacentHTML('beforeend', overViewItem)
+    return true
   })
 }
 
@@ -57,5 +58,6 @@ export const renderDetail = (data) => {
     <a id="button" href="#overview"><span>Back</span></a>
     </article>
   `
-  return mainContainer.insertAdjacentHTML('beforeend', detailArticle)
+  mainContainer.insertAdjacentHTML('beforeend', detailArticle)
+  return true
 }

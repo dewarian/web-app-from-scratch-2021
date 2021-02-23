@@ -14,5 +14,15 @@ export const datatest = (test) => {
  * @param {String} url API endpoint to call.
  */
 export const getData = async (url) => {
-  return await fetch(url).then((response) => response.json())
+  return await fetch(url)
+    .then((response) => response.json())
+    .catch((err) => console.log(err))
+    .finally(() => {
+      const test = () =>
+        document.getElementsByClassName('loader')[0] === 'null'
+          ? (document.getElementsByClassName('loader')[0].style.display =
+              'none')
+          : null
+      test()
+    })
 }
