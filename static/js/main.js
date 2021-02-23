@@ -24,6 +24,7 @@ const addYearContent = (tagName, selector) => {
  * @description immediately self invoking function javascript, executes when block is on the stack.
  * @todo Remove console.log, Currently testing the working of the onreadystatechange. As of 19-2 it only slows down my the retrieval
  * @todo commented createContent out to clean the console.
+ * @todo router can ask for 3 parameters, not all have to be given.
  */
 ;(async function compileApp() {
   addYearContent('span', 'footer p')
@@ -33,7 +34,7 @@ const addYearContent = (tagName, selector) => {
     } else if (document.readyState === 'interactive') {
       console.log('test')
     } else if (document.readyState === 'complete') {
-      router()
+      router(2021, 'winter', 0)
     } else {
       console.log('nani')
     }
