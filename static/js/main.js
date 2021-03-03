@@ -34,7 +34,7 @@ const addYearContent = (tagName, selector) => {
     } else if (document.readyState === 'interactive') {
       console.log('test')
     } else if (document.readyState === 'complete') {
-      router(2021, 'winter', 0)
+      router(2021, 'spring', 50)
     } else {
       console.log('nani')
     }

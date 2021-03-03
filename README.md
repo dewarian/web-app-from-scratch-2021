@@ -20,9 +20,13 @@
 Visit the live version of this prototype on [Kitsu WAFS](https://nb-wafs.vercel.app/).  
 [JSDocs documentation](https://dewarian.github.io/web-app-from-scratch-2021/)
 
+![image](https://user-images.githubusercontent.com/13199349/109791816-290ef100-7c13-11eb-97d6-d07b16767aa4.png)
+
 # DESCRIPTION
 
-Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries
+Kitsu WAFS, is a web app made from scratch with little to no help from external frameworks or libraries to render data from the Kitsu API. With this I have created a tool where the user can see the series that will be released this current season. Does a show look interesting? Click on it to find more about that show.
+
+Web-App-From-Scratch is a course from the [minor Web Development And Design](https://github.com/cmda-minor-web/web-app-from-scratch-2021) where we build a web app with external data but without any frameworks or unnecessary libraries.
 
 # CONCEPT
 
@@ -97,6 +101,8 @@ I was dabbling between bracketed notation or gitmoji, but decided to go with git
 
 # EXTERNAL DATA
 
+Kitsu is a modern anime discovery platform that helps you track the anime you're watching, discovering and socializing with other fans. This project predominantly focusses on the discovering part.
+
 Data is retrieved from the [Kitsu API](https://kitsu.docs.apiary.io/) Which uses the JSON:API specification. JSON:API is a specification for how a client should request resources be fetched or modified, and how a server should respond to the requests.
 
 The client sends a `GET` request to the API and retrieves an array of objects.
@@ -106,7 +112,7 @@ GET https://kitsu.io/api/edge/anime
 ```
 
 <details>
-<summary>Response GET request</summary>
+<summary><b>Response GET request</b></summary>
 <pre>
 <code>
 {data: Array(20), meta: {…}, links: {…}}
@@ -203,6 +209,12 @@ __proto__: Object
 </pre>
 </details>
 
+## EXTERNAL CODE
+
+There is one piece of code that hasn't been created by me. It is [Routie](http://projects.jga.me/routie/).
+
+Routie is a javascript hash routing library. Designed to be small light-weight and able to handle all simplistic routing needs. To be able to use this one needs to place it in your project, in this project's case, in the [index.html](https://github.com/dewarian/web-app-from-scratch-2021/blob/48fd24266cce9799e9db72d0c8f45b49526da50e/index.html#L26).
+
 # BREAKDOWN APPLICATION
 
 ## Actor Diagram
@@ -219,6 +231,16 @@ __proto__: Object
 This part of the README is everchanging.
 
 ## CHANGES
+
+### 03-03-2021
+
+- [x] Update readme
+- [x] Refactor function names to reflect diagram
+
+### 23-02-2021
+
+- [x] Modularize data retrieval link
+- [x] Update diagrams
 
 ### 15-02-2021
 
@@ -267,7 +289,8 @@ This part of the README is everchanging.
 ### Must
 
 - [ ] Update content Detail page.
-- [ ] Update Diagrams to reflect change of API.
+- [ ] More interaction, e.g. filtering, sorting, searching.
+- [x] Update Diagrams to reflect change of API.
 
 ### Could
 
