@@ -18,11 +18,11 @@ export const getData = async (url) => {
     .then((response) => response.json())
     .catch((err) => console.log(err))
     .finally(() => {
-      const test = () =>
+      const removeLoader = () =>
         document.getElementsByClassName('loader')[0] === 'null'
           ? (document.getElementsByClassName('loader')[0].style.display =
               'none')
           : null
-      test()
+      removeLoader()
     })
 }
