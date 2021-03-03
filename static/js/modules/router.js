@@ -1,5 +1,5 @@
 import { getData } from './data.js'
-import { render, renderDetail } from './render.js'
+import { setDetail, setOverview } from './render.js'
 
 /**
  * @title router
@@ -28,13 +28,13 @@ export const router = (year = 2021, season = 'winter', offset = 0) => {
       const getOverview = await getData(
         `${baseUrl}?filter${seasonYearFilter}${year}&${seasonFilter}${season}&${pageLimit}&${offSet}${offset}`
       )
-      return render(getOverview)
+      return setOverview(getOverview)
     },
     // Route to detail
     'detail/:id': async (id) => {
       const details = await getData(`${baseUrl}/${id}`)
       // console.log(details)
-      renderDetail(details)
+      setDetail(details)
     },
     // Wildcard URI, catching first opening. Last as routie iterates and listens to order.
     '': async () => {
@@ -42,7 +42,7 @@ export const router = (year = 2021, season = 'winter', offset = 0) => {
         // `${baseUrl}?filter${seasonYearFilter}&${seasonFilter}&${pageLimit}&${offSet}0`
         `${baseUrl}?filter${seasonYearFilter}${year}&${seasonFilter}${season}&${pageLimit}&${offSet}${offset}`
       )
-      return render(getOverview)
+      return setOverview(getOverview)
     }
   })
 }

@@ -6,7 +6,7 @@
  * @todo Expand upon the render functionality by extracting html element from this block.
  * @param {Array} data Array of objects to loop through.
  */
-export const render = (data) => {
+export const setOverview = (data) => {
   const mainContainer = document.querySelector('main')
   while (mainContainer.firstChild) {
     mainContainer.removeChild(mainContainer.firstChild)
@@ -35,7 +35,7 @@ export const render = (data) => {
  * @description Function removes existing child nodes of specified parent and populates with detail information.
  * @param {Object} data Object of data to populate DOM
  */
-export const renderDetail = (data) => {
+export const setDetail = (data) => {
   const mainContainer = document.querySelector('main')
   while (mainContainer.firstChild) {
     mainContainer.removeChild(mainContainer.firstChild)
