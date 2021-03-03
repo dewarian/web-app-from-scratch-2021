@@ -33,13 +33,11 @@ export const router = (year = 2021, season = 'winter', offset = 0) => {
     // Route to detail
     'detail/:id': async (id) => {
       const details = await getData(`${baseUrl}/${id}`)
-      // console.log(details)
       setDetail(details)
     },
     // Wildcard URI, catching first opening. Last as routie iterates and listens to order.
     '': async () => {
       const getOverview = await getData(
-        // `${baseUrl}?filter${seasonYearFilter}&${seasonFilter}&${pageLimit}&${offSet}0`
         `${baseUrl}?filter${seasonYearFilter}${year}&${seasonFilter}${season}&${pageLimit}&${offSet}${offset}`
       )
       return setOverview(getOverview)
