@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>main.js - Documentation</title>
+    <title>modules/router.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">main.js</h1>
+    <h1 class="page-title">modules/router.js</h1>
     
 
     
@@ -39,49 +39,54 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { router } from './modules/router.js'
+            <pre class="prettyprint source linenums"><code>import { getData } from './data.js'
+import { render, renderDetail } from './render.js'
 
 /**
- * @title Add Dynamic Year Content
+ * @title router
  * @function
- * @description Creates content to populate the specified element
- * @param {String} tagName HTML element tagName that needs to be created.
- * @param {String} selector querySelector element it needs to target for insertion.
+ * @description handles routing of the web app. Currently has three routes
  */
-const addYearContent = (tagName, selector) => {
-  const currentYear = new Date().getFullYear()
-  const newElement = document.createElement(tagName)
-
-  const newContent = document.createTextNode(`, ${currentYear}`)
-  newElement.appendChild(newContent)
-
-  const elementSelect = document.querySelector(selector)
-  return elementSelect.appendChild(newElement)
-}
 
 /**
- * @title IIFE compileApp
+ * @title router
  * @function
- * @description immediately self invoking function javascript, executes when block is on the stack.
- * @todo Remove console.log, Currently testing the working of the onreadystatechange. As of 19-2 it only slows down my the retrieval
- * @todo commented createContent out to clean the console.
- * @todo router can ask for 3 parameters, not all have to be given.
+ * @description handles routing of the web app. Currently has three routes, parameters are optional, default is winter 2021.
+ * @param {Number} year Year release, can go up to current year.
+ * @param {String} season Season release, has to be winter, summer, spring or fall.
+ * @param {Number} offset Pagination variable, offset by 20 to see next page.
  */
-;(async function compileApp() {
-  addYearContent('span', 'footer p')
-  document.onreadystatechange = function () {
-    if (document.readyState === 'loading') {
-      console.log('LOADING')
-    } else if (document.readyState === 'interactive') {
-      console.log('test')
-    } else if (document.readyState === 'complete') {
-      router(2021, 'winter', 0)
-    } else {
-      console.log('nani')
+export const router = (year = 2021, season = 'winter', offset = 0) => {
+  const baseUrl = 'https://kitsu.io/api/edge/anime'
+  const seasonYearFilter = '[seasonYear]='
+  const seasonFilter = '[season]='
+  const pageLimit = 'page[limit]=20'
+  const offSet = 'page[offset]='
+  // eslint-disable-next-line no-undef
+  routie({
+    // Route to overview
+    overview: async () => {
+      const getOverview = await getData(
+        `${baseUrl}?filter${seasonYearFilter}${year}&amp;${seasonFilter}${season}&amp;${pageLimit}&amp;${offSet}${offset}`
+      )
+      return render(getOverview)
+    },
+    // Route to detail
+    'detail/:id': async (id) => {
+      const details = await getData(`${baseUrl}/${id}`)
+      // console.log(details)
+      renderDetail(details)
+    },
+    // Wildcard URI, catching first opening. Last as routie iterates and listens to order.
+    '': async () => {
+      const getOverview = await getData(
+        // `${baseUrl}?filter${seasonYearFilter}&amp;${seasonFilter}&amp;${pageLimit}&amp;${offSet}0`
+        `${baseUrl}?filter${seasonYearFilter}${year}&amp;${seasonFilter}${season}&amp;${pageLimit}&amp;${offSet}${offset}`
+      )
+      return render(getOverview)
     }
-  }
-  // createContent('details', ['one', 'two', 'three'])
-})()
+  })
+}
 </code></pre>
         </article>
     </section>
